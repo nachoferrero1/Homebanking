@@ -1,0 +1,1399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* MANAGER*/
+#body1 {
+    /* background-image: url(img/homebanking-argentina.jpg); */
+    background-color: rgb(29, 29, 29);
+    color: white;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+table {
+    background-color: rgba(255, 255, 255, 0.342);
+}
+
+td {
+    color: white;
+}
+
+pre {
+    background-color: rgba(0, 0, 0, 0.664);
+}
+
+
+/* ACCOUNTS */
+#body2 {
+    font-family: 'Bangers', cursive;
+    background-image: url(img/innovacion2.jpg);
+    background-size: cover;
+    width: 100%;
+}
+
+.m-3{
+    height: max-content;
+}
+
+.focus-in-contract-bck {
+	animation: focus-in-contract-bck 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes focus-in-contract-bck {
+    0% {
+      letter-spacing: 1em;
+      transform: translateZ(300px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateZ(12px);
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+  
+
+#exit {
+    background-color: rgb(79, 60, 201);
+    color: white;
+    padding: 0.3rem;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+#exit:hover{
+    background-color:rgb(92, 76, 201);
+}
+
+.salir {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header{
+    background-color: slateblue;
+}
+
+.modal-title{
+margin-left: 40%;
+}
+
+#flecha{
+    width: 3rem;
+    margin-left: 1rem;
+}
+
+#flecha:hover{
+    transform: rotate(360deg);
+    transition-duration: 1s;
+}
+
+ul {
+    /* background-color: black; */
+    padding: 0.5rem;
+    border-radius: 15px;
+}
+
+#box {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.botonessuperiores {
+    transition-duration: 0.5s;
+}
+
+.botonessuperiores:hover {
+    font-size: large;
+    transition-duration: 0.5s;
+}
+
+h2 {
+    color: white;
+    font-size: xx-large;
+    display: flex;
+    margin-bottom: .3rem;
+    justify-content: center;
+}
+
+
+h3 {
+    background-color: slateblue;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#transaccionesDeCuenta{
+    margin: auto 10%;
+}
+
+
+
+.btn {
+    background-color: black;
+    border: none;
+    box-shadow: 0 0 5px slateblue;
+}
+
+.btn:hover {
+    background-color: slateblue;
+}
+
+.btn2 {
+    background-color: white;
+    border: none;
+    box-shadow: 0 0 5px black;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.btn2:hover {
+    background-color: rgba(105, 90, 205, 0.452);
+}
+
+
+#tabla {
+    margin: auto 10% 5% 10%;
+}
+
+
+header {
+    background-color: black;
+    border-bottom: 1px slateblue solid;
+    box-shadow: 1px 3px 5px slateblue;
+    
+}
+
+
+#op {
+    background-color: rgba(0, 0, 0, 0.548);
+    color: white;
+    border-radius: 15px;
+    margin: 3% 5%;
+    box-shadow: 0 0 15px slateblue;
+}
+
+.nav {
+    background-image: url(img/future3.webp);
+    background-size: cover;
+}
+
+.nav-link {
+    /* BOTONES EMPRESA MI CUENTA Y TRANSACCIONES */
+    background-color: black !important;
+    color: white !important;
+    box-shadow: 0px 0px 7px slateblue;
+}
+
+.nav-link:hover {
+    color: slateblue !important;
+}
+
+#paginaactiva {
+    color: slateblue !important;
+}
+
+
+.carta {
+    background-color: rgb(31, 31, 31);
+    color: white;
+    box-shadow: 0 0 15px slateblue;
+}
+
+.modal-body {
+    color: black;
+}
+
+#volveralinicio {
+    font-size: x-large;
+    transition-duration: 0.5s;
+}
+
+#volveralinicio:hover {
+    color: white;
+    font-size: xx-large;
+    transition-duration: 0.5s;
+}
+
+#ir {
+    transition-duration: 0.5s;
+}
+
+#ir:hover {
+    color: slateblue !important;
+    font-size: x-large;
+    transition-duration: 0.5s;
+}
+
+#li {
+    background-color: slateblue;
+    /* prueba */
+}
+
+#aviso {
+    width: 100%;
+    color: white;
+    background-color: rgba(172, 172, 172, 0.288);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.salir h2 {
+    margin: 0;
+}
+
+.imagenHH {
+    width: 4rem;
+
+}
+
+.imagenH {
+    width: 3rem;
+}
+
+h6 {
+    margin: 0;
+    align-items: center;
+}
+
+.card-footer {
+    padding: 0;
+}
+
+#crearLoan{
+    box-shadow: 0px 0px 5px red;
+}
+
+#createLoan:hover{
+    color: red !important;
+}
+
+
+
+/* ENTRADA */
+#entrada {
+    min-height: 100vh;
+    position: relative;
+}
+
+#video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+}
+
+.promo {
+    font-family: 'Bangers', cursive;
+    padding-top: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+footer {
+    background-color: black !important;
+    box-shadow: 0px -5px 7px slateblue;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+#botonentrada:hover {
+    background-color: rgba(16, 214, 171, 0.843);
+}
+
+
+
+/* TRANSACTIONS */
+
+
+#bodytransactions,
+#bodycards {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    font-family: 'Bangers', cursive;
+}
+
+
+#cajamaquina {
+    align-items: center;
+    margin: 1% 15% 0 10%;
+}
+
+#maquina {
+    margin-left: 30%;
+    width: 97%;
+}
+
+.fs-4 {
+    color: slateblue;
+    text-decoration: underline 1px !important;
+}
+
+#mindhub {
+    transition-duration: 0.5s;
+}
+
+#mindhub:hover {
+    color: slateblue;
+    font-size: xx-large !important;
+    transition-duration: 0.5s;
+}
+
+.carta {
+    box-shadow: 0px 0px 5px slateblue;
+}
+
+.carta:hover {
+    box-shadow: 0px 0px 10px slateblue;
+}
+
+.list-group {
+    margin-left: 0.5rem;
+
+}
+
+.list-group-item {
+    background-color: #191c29;
+}
+
+/* -------TABLA------ */
+
+.container th {
+    color: slateblue;
+    text-align: center;
+}
+
+.container td {
+    text-align: center;
+}
+
+.blue {
+    color: #185875;
+}
+
+.yellow {
+    color: #FFF842;
+}
+
+.container th h1 {
+    font-weight: bold;
+    font-size: 1em;
+    text-align: left;
+    color: #185875;
+}
+
+.container td {
+    font-weight: normal;
+    font-size: 1em;
+    -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+    -moz-box-shadow: 0 2px 2px -2px #0E1119;
+    box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+.container {
+    text-align: left;
+    overflow: hidden;
+    width: 80%;
+    margin: 2rem auto;
+    display: table;
+    padding: 0 0 8em 0;
+}
+
+.container td,
+.container th {
+    padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+/* Background-color of the odd rows */
+.container tr:nth-child(odd) {
+    background-color: #202631;
+}
+
+/* Background-color of the even rows */
+.container tr:nth-child(even) {
+    background-color: #191b20;
+}
+
+.container th {
+    background-color: #1F2739;
+}
+
+.container td:first-child {
+    color: slateblue;
+}
+
+.container tr:hover {
+    -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+    -moz-box-shadow: 0 6px 6px -6px #0E1119;
+    box-shadow: 0 6px 6px -6px #0E1119;
+}
+
+.container td:hover {
+    background-color: slateblue;
+    color: white;
+
+    box-shadow: slateblue -1px 1px, slateblue -2px 2px, slateblue -3px 3px, slateblue -4px 4px, slateblue -5px 5px, slateblue -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: line;
+}
+
+@media (max-width: 800px) {
+
+    .container td:nth-child(4),
+    .container th:nth-child(4) {
+        display: none;
+    }
+}
+
+
+/* ----------------CARD----------------- */
+
+#mainCards{
+    background-image: url(img/innovacion2.jpg);
+    min-height: 25rem;
+}
+#mainCards2{
+    background-image: url(img/);
+    min-height: 25rem;
+}
+#mainCards3{
+    background-image: url(img/);
+    min-height: 25rem;
+}
+
+#tituloTarjetas {
+    margin: 0rem 15%;
+}
+
+.title {
+    margin-bottom: 30px;
+    color: #162969;
+}
+
+.madreTarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#madre{
+    justify-content: space-around;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 320px;
+    /* height: 190px; */
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+    perspective: 600px;
+    background-color: transparent;
+    margin-bottom: 12rem;
+    margin-top: 1rem;
+    align-items: center;
+    /* gap: 2rem; */
+}
+
+.card__part {
+    box-shadow: 0px 0px 3px slateblue;
+    /* sombra de la tarjeta */
+    top: 0;
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    display: inline-block;
+    width: 320px;
+    height: 190px;
+    background-image: url('img/fondocardopcional.jpg');
+    /*linear-gradient(to right bottom, #fd8369, #fc7870, #f96e78, #f56581, #ee5d8a)*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+
+    -webkit-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -ms-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+
+.card__front {
+    padding: 18px;
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    transition-duration: 3s;
+}
+
+.card__back {
+    padding: 18px 0;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    transition-duration: 3s;
+}
+
+.card__black-line {
+    margin-top: 5px;
+    height: 38px;
+    background-color: #141414;
+    /* franja trasera de la tarjeta */
+}
+
+.card__logo {
+    height: 16px;
+}
+
+.card__front-logo {
+    width: 3rem;
+    height: 6vh;
+    border-radius: 5px;
+    position: absolute;
+    top: 18px;
+    right: 18px;
+}
+
+.card__square {
+    border-radius: 5px;
+    height: 30px;
+}
+
+.card_numer {
+    display: block;
+    width: 100%;
+    word-spacing: 4px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: white;
+    /* numero central */
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.card__space-75 {
+    width: 75%;
+    float: left;
+}
+
+.card__space-25 {
+    width: 25%;
+    float: left;
+}
+
+.card__label {
+    font-size: 10px;
+    color: goldenrod;
+    /* titular, from y thru */
+    letter-spacing: 1px;
+}
+
+.card__info {
+    margin-bottom: 0;
+    margin-top: -4px;
+    font-size: 16px;
+    line-height: 18px;
+    /* color: white; */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.card__back-content {
+    padding: 0px 15px 0;
+}
+
+.card__secret--last {
+    color: white;
+    /* color del codigo de seguridad */
+    text-align: right;
+    margin: 0;
+    font-size: 14px;
+}
+
+.card__secret {
+    padding: 5px 12px;
+    background-color: black;
+    /* fondo del codigo de seguridad */
+    border-radius: 5px;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.card__secret:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    height: calc(100% + 6px);
+    width: calc(100% - 42px);
+    border-radius: 4px;
+    background: repeating-linear-gradient(45deg, #c0c0c0, #ededed 5px, #f9f9f9 5px, #f9f9f9 10px);
+    /* franjas de la barra de atras de la tarjeta */
+}
+
+.card__back-logo {
+    width: 3.5rem;
+    height: 6vh;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.card__back-square {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+.card:hover .card__front {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transition-duration: 2s;
+
+}
+
+.card:hover .card__back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    transition-duration: 2s;
+}
+
+.botonBorrar{
+    text-align: center;
+}
+
+#botonesBorrarCuentas{
+    margin-top: 0.5rem;
+}
+
+.deleteCard{
+    margin-top: 0rem;
+    background-color: slateblue;
+    color: black;
+    border-radius: 5px;
+    padding: 0.3rem;
+}
+
+.deleteCard:hover{
+    background-color: rgb(70, 50, 206);
+}
+
+#fechas {
+    display: flex;
+    justify-content: space-around;
+}
+
+.from {
+    margin-right: 20px;
+}
+
+#tipo {
+    border-radius: 10px;
+    color: white;
+    margin-left: 35%;
+    margin-top: 10%;
+    font-size: x-large;
+}
+
+#tipodetarjeta {
+    margin-left: 20%;
+    font-size: x-large;
+
+}
+
+.ver {
+    color: white;
+    background-color: black;
+    box-shadow: 0px 0px 5px slateblue;
+    font-size: x-large;
+    border-radius: 10px;
+    margin: 0 1rem;
+    transition-duration: 0.5s;
+}
+
+.ver:hover {
+    font-size: xx-large;
+    transition-duration: 0.5s;
+}
+
+/* ------------------CARD END--------------------- */
+
+
+
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 1000px) {
+    #box {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    header {
+        margin: 0;
+    }
+
+    #bodytransactions {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    #cajamaquina {
+        flex-wrap: wrap;
+    }
+
+    #maquina {
+        margin: auto;
+    }
+
+    .cuentasyprestamos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #cartas2 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    
+    #madre {
+        flex-wrap: wrap;
+    }
+
+    h4 {
+        display: flex;
+        justify-content: center;
+    }
+
+    #tabla {
+        margin: 0;
+    }
+
+    .salir {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .card1{
+        flex-wrap: wrap;
+    }
+
+    
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+    .botonessuperiores {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #titulo {
+        display: flex;
+        justify-content: center;
+    }
+
+    #op {
+        justify-content: center;
+    }
+
+    #op .d-flex {
+        flex-wrap: wrap;
+    }
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    /* ocultar texto de derechos reservados largo */
+    footer p {
+        visibility: hidden;
+    }
+
+    /* agregar texto de derechos reservados corto */
+    footer p:before {
+        content: "© Banco Fast Bank S.A. Todos los derechos reservados.";
+        visibility: visible;
+        margin-left: 10%;
+        margin-top: 1rem;
+        display: flex;
+    }
+
+    #flecha{
+        margin-left: 0.5rem;
+    }
+
+
+    #exit{
+        margin-right: 0.3rem;
+        
+    }
+
+    .login-box{
+        margin: 1rem;
+    }
+
+    .card1{
+        width: 90%;
+    }
+
+    #madre{
+        justify-content: flex-start;
+        
+    }
+
+}
+
+
+/* Magic */
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+/*  :root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+  } */
+
+
+/*   body {
+    min-height: 100vh;
+    background: #212534;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+  } */
+
+
+.magic {
+    display: flex;
+    flex-direction: column;
+    background: #191c29;
+    width: var(--card-width);
+    height: var(--card-height);
+    padding: 3px;
+    position: relative;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1rem;
+    font-family: 'Bangers', cursive;
+    color: white;
+}
+
+
+.magic::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.magic::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+
+/* BUTTON CREATED */
+.buttonContain {
+    display: flex;
+    justify-content: center !important;
+    margin-top: 1rem;
+}
+
+.botonPrestamos{
+    margin-top: 1rem;
+}
+
+.btn-12 {
+    display: flex;
+    justify-content: center;
+    /* margin-left: 50%; */
+    margin-bottom: 2%;
+    border: none;
+    box-shadow: none;
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    -webkit-perspective: 230px;
+    perspective: 230px;
+    background-color: black;
+}
+
+.btn-12 span {
+    background: slateblue;
+    background: linear-gradient(0deg, slateblue 0%, rgb(57, 42, 150) 100%);
+    display: block;
+    position: absolute;
+    width: 130px;
+    height: 40px;
+    box-shadow: 0px 0px 5px slateblue,
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    margin: 0;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.btn-12 span:nth-child(1) {
+    box-shadow:
+        -7px -7px 20px 0px rgb(0, 0, 0) -4px -4px 5px 0px rgb(0, 0, 0),
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+}
+
+.btn-12 span:nth-child(2) {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+}
+
+.btn-12:hover span:nth-child(1) {
+    box-shadow: inset 2px 2px 2px 0px rgb(60, 31, 245),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+
+.btn-12:hover span:nth-child(2) {
+    box-shadow: inset 2px 2px 2px 0px rgb(60, 31, 245),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    color: transparent;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+}
+
+
+/* -----create cards------ */
+    /* #crearTarjeta{
+        display: flex;
+        justify-content: center;
+        margin: 3% auto;
+    }
+  
+  .login-box {
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    background: rgba(0, 58, 58, 0.562);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+  
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+  }
+  
+  .login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    margin-left: 35%;
+    letter-spacing: 4px
+  }
+  
+  .login-box a:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+  }
+  
+  .login-box a span {
+    position: absolute;
+    display: block;
+  }
+  
+  .login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  } */
+
+
+.mainscreen{
+	min-height: min-content;
+	width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #DFDBE5;
+    /* background-image: url("https://wallpaperaccess.com/full/3063067.png"); */
+    background-image: url(img/innovacion2.jpg);
+    color:slateblue;
+}
+
+.card1 {
+	width: 90%;
+    margin: 3rem auto;
+    background: white;
+    position:center;
+    align-self: center;
+    top: 50rem;
+    border-radius: 1.5rem;
+    box-shadow: 4px 3px 20px #3535358c;
+    display:flex;
+    
+    
+}
+
+.leftside {
+    /* background-color: black; */
+	background: linear-gradient(
+    135deg, rgba(160, 62, 206, 0.685) 0%, rgba(0, 132, 255, 0.692) 100%);
+	width: 25rem;
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+	border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+
+.product {
+    object-fit: contain;
+	width: 20em;
+    height: 20em;
+    border-radius: 100%;
+    transition-duration: 0.5s;
+}
+
+.product:hover{
+    transition-duration: 0.5s;
+    width: 21em;
+    height: 21em;
+}
+
+.rightside {
+    background-color: #ffffff;
+	width: 35rem;
+	border-bottom-right-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    padding: 1rem 3rem 3rem 3rem;
+}
+
+p{
+    display:block;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: .8rem 0;
+}
+
+.inputbox
+{
+    color:#030303;
+	width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1.5px solid #ccc;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+    font-family: 'Roboto', sans-serif;
+    color: #615a5a;
+    font-size: 1.1rem;
+    font-weight: 500;
+    outline:none;
+}
+
+.expcvv {
+    display:flex;
+    justify-content: space-between;
+    padding-top: 0.6rem;
+}
+
+.expcvv_text{
+    padding-right: 1rem;
+}
+.expcvv_text2{
+    padding:0 1rem;
+}
+
+.button{
+    background: linear-gradient(
+    135deg, rgb(160, 62, 206) 0%, rgb(0, 132, 255) 100%);
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    width:100%;
+    letter-spacing: .11rem;
+    outline:none;
+    transition-duration: 0.5s;
+}
+
+.button:hover{
+    background: linear-gradient(
+    135deg, rgb(154, 52, 201) 0%, rgb(1, 85, 163) 100%);
+    transition-duration: 0.5s;   
+	transform: scale(1.05) translateY(-3px);
+    box-shadow: 3px 3px 6px #38373785;
+}
+
+.rightside h1{
+    text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .card{
+        flex-direction: column;
+        width: auto;
+      
+    }
+
+    .leftside{
+        width: 100%;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+      border-top-right-radius:0;
+      border-radius:0;
+    }
+
+    .rightside{
+        width:auto;
+        border-bottom-left-radius: 1.5rem;
+        padding:0.5rem 3rem 3rem 2rem;
+      border-radius:0;
+    }
+}
+
+
+
+/* Create Transactions */
+
+
+
+
+

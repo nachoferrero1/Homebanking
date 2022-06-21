@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="bodycards">
+    <div id="app">
+        <header>
+            <div id="titulo" >
+                <li class="salir d-flex">
+
+                    <div>
+                        <a href="account.html"><img id="flecha" src="img/atras.png" alt="atras"></a>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                    <img class="imagenHH" src="img/h.png" alt="img" >
+                    <h2>o m e b a n k i n g</h2>
+                    </div>
+
+                    <!-- Button trigger modal -->
+                    <button type="button" id="exit" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Sign Out
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Cerrar Sesion</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    ¿Estas Seguro que quieres cerrar sesion?
+                                </div>
+                                    <div class="modal-footer d-flex justify-content-center">
+                                        <button type="button" class="btn2" data-bs-dismiss="modal">Volver</button>
+                                        <button v-on:click="volver" class="btn2" type="button">Si, Cerrar</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </li>
+            </div>
+
+            <ul class="nav nav-pills d-flex justify-content-around m-3">
+
+
+
+                <div class="botonessuperiores">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="accounts.html">Mi cuenta</a>
+                    </li>
+                </div>
+
+                <div class="botonessuperiores">
+                    <li class="nav-item">
+                        <a  class="nav-link " href="account.html">Transacciones</a>
+                    </li>
+                </div>
+
+                <div class="botonessuperiores">
+                    <li class="nav-item">
+                        <a id="paginaactiva" class="nav-link " href="cards.html">Tarjetas</a>
+                    </li>
+                </div>
+
+            </ul>
+        </header>
+
+
+        <div id="mainCards">
+        
+            
+            <h3 id="tituloTarjetas" class="text-center">visualiza las tarjetas que estan a tu nombre</h3>
+
+            <div v-show="ocultarBoton()" class="buttonContain">
+                <a href="create-cards.html"><button class="custom-btn btn-12"><span>Create Cards</span><span>No Cards?</span></button></a>
+            </div>
+
+            <div>
+                <h2 v-if="tarjetas.length === 0" >¡Ups aun no tienes tarjetas!</h2>
+                <div v-else id="madre" class="d-flex m-5">
+
+                    <div>
+                        <h4 class="link-light text-center">TUS TARJETAS DE CREDITO</h4>
+                        
+                        <div class="madreTarjetas">
+                            <div v-for="tarjeta in tarjetas.filter(tarjeta=> tarjeta.type=='CREDIT')" class="d-flex flex-column">
+
+                                <div class="card">
+                                    <div class="card__front card__part">
+
+
+                                        <div class="d-flex">
+                                            <img class="card__front-square card__square" src="img/chipemv.webp" alt="x">
+                                            <p id="tipodetarjeta" class="link-light">{{tarjeta.type}} CARD</p>
+                                            <img class="card__front-logo card__logo" src="img/vis.jpg" alt="y" >
+                                        </div>
+            
+                                        <p class="card_numer">{{tarjeta.number}}</p>
+            
+                                        <div id="titular" class="card__space-75">
+                                            <span class="card__label">Titular</span>
+                                            <p class="card__info link-light">{{tarjeta.cardHolder}}</p>
+                                        </div>
+            
+                                        <div id="fechas" class="card__space-25">
+                                            
+                                            <div class="from">
+                                                <span  class="card__label">from</span>
+                                                <p class="card__info link-light">{{obtenerFecha(tarjeta.fromDate)}}</p>
+                                            </div>
+            
+                                            <div class="from">
+                                                <span class="card__label">Thru</span>
+                                                <p v-if="obtenerFechaActual(tarjeta.thruDate)" class="card__info link-danger">{{obtenerFecha(tarjeta.thruDate)}}</p>
+                                                <p v-else class="card__info link-success">{{obtenerFecha(tarjeta.thruDate)}}</p>
+                                            </div>
+            
+                                        </div>
+                                        </div>
+                                        
+                                        <div class="card__back card__part">
+                                        <div class="card__black-line"></div>
+                                        <div class="card__back-content">
+                                            <div class="card__secret">
+                                            <p class="card__secret--last">{{tarjeta.cvv}}</p>
+                                            </div>
+                                            <img class="card__back-square card__square" src="img/emisor.png">
+                                            <p id="tipo">{{tarjeta.color}}</p>
+                                            <img class="card__back-logo card__logo" src="img/h.png">
+                                        </div>
+                                        </div>
+                                </div>
+                            
+                                <div class="botonBorrar">
+                                <button class="deleteCard" v-on:click="eliminarTarjeta(tarjeta.number)">Eliminar tarjetas</button>
+                                <!-- <input class="deleteCard" :value="tarjeta.number" v-model="tarjetaSeleccionada" type="radio" :name="tarjeta.number"></input> -->
+                                {{tarjetaSeleccionada}}
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div>
+                        <h4 class="link-light text-center">TUS TARJETAS DE DEBITO</h4>
+                        <div v-for="tarjeta in tarjetas.filter(tarjeta=> tarjeta.type=='DEBIT')" >
+
+                           <div class="card">
+                            <div class="card__front card__part">
+
+
+                                <div class="d-flex">
+                                    <img class="card__front-square card__square" src="img/chipemv.webp" alt="x">
+                                    <p id="tipodetarjeta" class="link-light">{{tarjeta.type}} CARD</p>
+                                    <img class="card__front-logo card__logo" src="img/vis.jpg" alt="y" >
+                                </div>
+    
+                                <p class="card_numer">{{tarjeta.number}}</p>
+    
+                                <div id="titular" class="card__space-75">
+                                    <span class="card__label">Titular</span>
+                                    <p class="card__info link-light">{{tarjeta.cardHolder}}</p>
+                                </div>
+    
+                                <div id="fechas" class="card__space-25">
+                                    
+                                    <div class="from">
+                                        <span  class="card__label">from</span>
+                                        <p class="card__info link-light">{{obtenerFecha(tarjeta.fromDate)}}</p>
+                                    </div>
+    
+                                    <div class="from">
+                                        <span class="card__label">Thru</span>
+                                        <p v-if="obtenerFechaActual(tarjeta.thruDate)" class="card__info link-danger">{{obtenerFecha(tarjeta.thruDate)}}</p>
+                                        <p v-else="" class="card__info link-success">{{obtenerFecha(tarjeta.thruDate)}}</p>
+                                    </div>
+    
+                                </div>
+                                </div>
+                                
+                                <div class="card__back card__part">
+                                <div class="card__black-line"></div>
+                                <div class="card__back-content">
+                                    <div class="card__secret">
+                                    <p class="card__secret--last">{{tarjeta.cvv}}</p>
+                                    </div>
+                                    <img class="card__back-square card__square" src="img/emisor.png">
+                                    <p id="tipo">{{tarjeta.color}}</p>
+                                    <img class="card__back-logo card__logo" src="img/h.png">
+                                </div>
+                                </div>
+                           </div>
+                            
+                            <div class="botonBorrar">
+                                <button class="deleteCard" v-on:click="eliminarTarjeta(tarjeta.number)">Eliminar tarjetas</button>
+                                <!-- <input class="deleteCard" :value="tarjeta.number" v-model="tarjetaSeleccionada" type="radio" :name="tarjeta.number" >eliminar tarjeta</input> -->
+                                {{tarjetaSeleccionada}}
+                            </div>
+                        </div>
+
+                    </div>
+                    
+
+                </div>
+            </div>
+
+            <a id="volveralinicio" class="d-flex justify-content-center" href="#">Volver al inicio</a>
+        </div>
+
+        <footer class="btn-danger d-flex justify-content-around">
+            <div>
+                <li class="d-flex align-items-end">
+                    <img class="imagenH" src="img/h.png" alt="" width="50rem">
+                    <h2>o m e b a n k i n g</h2>
+                </li>
+            </div>
+            <div>
+                <p class="text-center">
+                    © Homebanking S.A. Todos los derechos reservados. Sede corporativa: CGS Av. <br> Cantabria s/n 28660 Boadilla del Monte, Madrid (España)
+                </p>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+    <script src="./cards.js"></script>
+</body>
+</html>

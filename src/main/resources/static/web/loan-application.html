@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Cards</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="loan-application.css">
+</head>
+<body>
+    <div id="app">
+        
+        <section class="container">
+            <!-- <header>
+                
+                
+            </header> -->
+            <div id="padre">
+                <div>
+                    <a href="accounts.html"><img id="flecha" src="img/atras.png" alt="atras"></a>
+                </div>
+                <div id="logo"><img src="img/h.png" alt="Logo"></div>
+            </div>
+            <section class="content">
+                <article id="checkoutNav" class="shadow">
+                    <ul>
+                        <li class="active">
+                            <p>N°1</p>
+                            <i class="fa fa-truck" aria-hidden="true"></i>
+                            <p>take</p>
+                        </li>
+                        <li class="active">
+                            <p>N°2</p>
+                            <i class="fa fa-credit-card" aria-hidden="true"></i>
+                            <p>enjoy</p>
+                        </li>
+                        <li class="active">
+                            <p>N°3</p>
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            <p>pay later</p>
+                        </li>
+                    </ul>
+                </article>
+                <article v-if="loanType == '1'" id="product" class="shadow"><img src="img/prestamoHipotecario.jpg" alt="casa"></article>
+                <article v-else-if="loanType == '2'" id="product" class="shadow"><img src="img/prestamoAuto.jpg" alt="auto"></article>
+                <article v-else-if="loanType == '3'" id="product" class="shadow"><img src="img/personalLoan.jpg" alt="auto"></article>
+                <article v-else="" id="product" class="shadow"><img src="img/prestamos.jpg" alt="auto"></article>
+                <h1 v-if="loanType == ''" >Prestamos💰</h1>
+                <h1 v-if="loanType == '1'" >Prestamo hipotecario 🏡</h1>
+                <h1 v-if="loanType == '2'" >Prestamo automotriz 🚗</h1>
+                <h1 v-if="loanType == '3'" >Prestamo personal 👦🏽</h1>
+                <article id="checkoutCard" class="shadow">
+                    <div id="details">
+                        <dl class="">
+                            <dt>Product</dt>
+                            <dd v-if="loanType == '1'"><img id="thumbnail" src="img/logoLlave.png" alt="Lunar 2"></dd>
+                            <dd v-else-if="loanType == '2'"><img id="thumbnail" src="img/llavesAuto.png" alt="Lunar 2"></dd>
+                            <dd v-else-if="loanType == '3'"><img id="thumbnail" src="img/personalLoan1.png" alt="Lunar 2"></dd>
+                            <dd v-else="loanType == ''" ><img id="thumbnail" src="img/bolsaConDinero.png" alt="Lunar 2"></dd>
+                            <dt>Loan</dt>
+                            <select v-model="loanType" class="inputbox" name="loanType" id="loantype" required>
+                                <option value="">Select a loan type</option>
+                                <option v-for="loan in loans" :value="loan.id">{{loan.name}}</option>
+                            </select>
+                            <dt>Max amount</dt>
+                            <dd v-if="loanType == ''"> $0 </dd>
+                            <dd v-if="loanType == '1'"> $500,000 </dd>
+                            <dd v-if="loanType == '2'"> $300,000 </dd>
+                            <dd v-if="loanType == '3'"> $100,000 </dd>
+                            
+                        </dl>
+                    </div>
+                    <form action="">
+                        <div id="cards">
+                            
+                            <ul>
+                            <li><label for="" name="loanType">Amount</label></li>
+                            <input v-model="monto" class="link-dark" type="number" placeholder="$0">
+                            </ul>
+                        </div>
+                        <label for="">Choice your payments</label>
+                        <div v-if="loanType == '1'" id="cardNumber">
+                            <label for="1">12</label>
+                            <input v-model="payments" type="radio" name="select" id="12" value="12">
+                            <label for="1">24</label>
+                            <input v-model="payments" type="radio" name="select" id="24" value="24">
+                            <label for="1">36</label>
+                            <input v-model="payments" type="radio" name="select" id="36" value="36">
+                            <label for="1">48</label>
+                            <input v-model="payments" type="radio" name="select" id="48" value="48">
+                            <label for="1">60</label>                           
+                            <input v-model="payments" type="radio" name="select" id="60" value="60">
+                        </div>
+
+                        <div  v-if="loanType == '2'" id="cardNumber">
+                            <label for="1">6</label>
+                            <input v-model="payments" type="radio" name="select" id="6" value="6" checked>
+                            <label for="1">12</label>
+                            <input v-model="payments" type="radio" name="select" id="12" value="12">
+                            <label for="1">24</label>
+                            <input v-model="payments" type="radio" name="select" id="24" value="24">
+                        </div>
+
+                        <div  v-if="loanType == '3'" id="cardNumber">
+                            <label for="1">6</label>
+                            <input v-model="payments" type="radio" name="select" id="6" value="6" checked>
+                            <label for="1">12</label>
+                            <input v-model="payments" type="radio" name="select" id="12" value="12">
+                            <label for="1">24</label>
+                            <input v-model="payments" type="radio" name="select" id="24" value="24">
+                            <label for="1">36</label>
+                            <input v-model="payments" type="radio" name="select" id="36" value="36">
+                        </div>
+                        <div>
+                            <h6 v-if="monto > '0'">seran {{payments}} cuotas de ${{(monto/payments)*1.2}} = total: ${{monto * 1.2}} </h6>
+                        </div>
+                        <div id="securityInfo">
+                            <label>destination account</label>
+                            <select v-model="destination" class="inputbox" name="destinationAccount" id="loantype" required>
+                                <option value="">Select account destination</option>
+                                <option v-for="cuenta in cuentas" :value="cuenta.number">{{cuenta.number}} - balance ${{cuenta.balance}}</option>
+                              </select>
+                        </div>
+
+                        <input type="button" class="button" value="Apply" id="btnSubmit" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+
+                        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title link-dark " id="exampleModalLabel">¿Solicitar Prestamo?</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        ¿Estas Seguro que quieres solicitar el prestamo?
+                                    </div>
+                                        <div class="modal-footer d-flex justify-content-center">
+                                            <button type="button" class="btn2" data-bs-dismiss="modal">Cancelar</button>
+                                            <button v-on:click="solicitar()" class="btn2" type="button">solicitar</button>
+                                        </div>
+                                </div>
+                            </div> 
+                        </div>
+
+                    </form>
+                </article>
+            </section>
+            <footer><a href="#">team: mindhub</a><a href="#" target="_blank">Designer: nacho ferrero</a><a href="#" target="_blank">Web developers: nacho ferrero s.a</a> </footer>
+        </section>
+
+
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+    <script src="./loan-application.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
