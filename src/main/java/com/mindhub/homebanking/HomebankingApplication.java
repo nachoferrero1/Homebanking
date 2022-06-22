@@ -42,7 +42,7 @@ public class HomebankingApplication {
 
 
 			//CUENTAS
-			Account cuenta1 = new Account(4000, LocalDateTime.now().withNano(0),"VIN001", cliente1, TypeAccount.CORRIENTE);
+			Account cuenta1 = new Account(6000, LocalDateTime.now().withNano(0),"VIN001", cliente1, TypeAccount.CORRIENTE);
 			/*cliente1.addAccount(cuenta1);*/
 			accountRepository.save(cuenta1);
 
